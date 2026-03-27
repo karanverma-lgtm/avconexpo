@@ -30,7 +30,10 @@ import {
   User,
   MapPin,
   Phone,
-  Mail
+  Mail,
+  Facebook,
+  Linkedin,
+  Youtube
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { cn } from './lib/utils';
@@ -43,6 +46,42 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 // --- Components ---
+
+const TopBar = () => {
+  return (
+    <div className="bg-brand-primary text-white py-2.5 border-b border-white/10 text-[10px] sm:text-xs font-bold uppercase tracking-wider">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-3">
+        <div className="flex items-center gap-4 sm:gap-8">
+          <a href="mailto:consult@avconexpo.com" className="flex items-center gap-2 hover:text-slate-900 transition-colors">
+            <Mail className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline">consult@avconexpo.com</span>
+          </a>
+          <div className="flex items-center gap-4 sm:gap-6">
+            <a href="tel:+917007729873" className="flex items-center gap-2 hover:text-slate-900 transition-colors">
+              <Phone className="w-3.5 h-3.5" />
+              <span>+91-7007729873</span>
+            </a>
+            <a href="tel:+917860563231" className="hidden md:flex items-center gap-2 hover:text-slate-900 transition-colors">
+              <Phone className="w-3.5 h-3.5" />
+              <span>+91-7860563231</span>
+            </a>
+          </div>
+        </div>
+        <div className="flex items-center gap-5">
+          <a href="https://www.facebook.com/avconexpo/" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 transition-colors">
+            <Facebook className="w-4 h-4" />
+          </a>
+          <a href="https://www.linkedin.com/company/avconexpo/" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 transition-colors">
+            <Linkedin className="w-4 h-4" />
+          </a>
+          <a href="https://www.youtube.com/@avconexpo8187" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 transition-colors">
+            <Youtube className="w-4 h-4" />
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -62,10 +101,23 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b",
-      isScrolled ? "bg-white/80 backdrop-blur-md border-slate-200 py-3" : "bg-transparent border-transparent py-5"
-    )}>
+    <header className="fixed top-0 left-0 right-0 z-50">
+      <AnimatePresence>
+        {!isScrolled && (
+          <motion.div
+            initial={{ opacity: 0, y: -40 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -40 }}
+            transition={{ duration: 0.3 }}
+          >
+            <TopBar />
+          </motion.div>
+        )}
+      </AnimatePresence>
+      <nav className={cn(
+        "transition-all duration-300 border-b",
+        isScrolled ? "bg-white/80 backdrop-blur-md border-slate-200 py-3" : "bg-transparent border-transparent py-5"
+      )}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <img 
@@ -129,12 +181,13 @@ const Navbar = () => {
         )}
       </AnimatePresence>
     </nav>
+  </header>
   );
 };
 
 const Hero = () => {
   return (
-    <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+    <section className="relative pt-40 pb-20 lg:pt-56 lg:pb-32 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 -z-20 opacity-[0.07] pointer-events-none">
         <img 
