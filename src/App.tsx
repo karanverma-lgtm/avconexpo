@@ -136,8 +136,8 @@ const Hero = () => {
   return (
     <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
       {/* Background Accents */}
-      <div className="absolute top-0 right-0 -z-10 w-1/2 h-full opacity-10 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-primary rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute top-0 right-0 -z-10 w-1/2 h-full opacity-5 pointer-events-none">
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-primary rounded-full blur-[160px] -translate-y-1/2 translate-x-1/2" />
       </div>
       
       <div className="max-w-7xl mx-auto px-6">
@@ -198,10 +198,10 @@ const Hero = () => {
                 className="w-full h-[600px] object-cover"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/60 to-transparent" />
-              <div className="absolute bottom-8 left-8 right-8 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 text-white">
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/20 to-transparent" />
+              <div className="absolute bottom-8 left-8 right-8 p-6 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/20 text-white">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-brand-primary rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-brand-primary/80 rounded-full flex items-center justify-center">
                     <Zap className="w-6 h-6" />
                   </div>
                   <div>
