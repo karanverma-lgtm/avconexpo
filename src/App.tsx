@@ -135,6 +135,17 @@ const Navbar = () => {
 const Hero = () => {
   return (
     <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 -z-20 opacity-[0.07] pointer-events-none">
+        <img 
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000" 
+          alt="" 
+          className="w-full h-full object-cover"
+          referrerPolicy="no-referrer"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-transparent to-slate-50" />
+      </div>
+
       {/* Background Accents */}
       <div className="absolute top-0 right-0 -z-10 w-1/2 h-full opacity-5 pointer-events-none">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-primary rounded-full blur-[160px] -translate-y-1/2 translate-x-1/2" />
