@@ -295,7 +295,7 @@ const Services = () => {
             <Settings className="w-3 h-3" />
             Our Services
           </div>
-          <h3 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">End-to-End Industrial Solutions</h3>
+          <h3 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">End-to-End <span className="text-brand-primary">Industrial Solutions</span></h3>
           <p className="text-slate-600 max-w-2xl mx-auto">
             Expert Business and Technical consultancy delivering excellence from concept to consumer.
           </p>
@@ -459,8 +459,8 @@ const About = () => {
 
           <div>
             <h2 className="text-sm font-bold text-brand-primary uppercase tracking-[0.2em] mb-4">About AVCONEXPO</h2>
-            <h3 className="text-4xl font-bold text-brand-primary mb-6 leading-tight">
-              A Global Leader in Engineering & Technical Consultancy
+            <h3 className="text-4xl font-bold text-slate-900 mb-6 leading-tight">
+              A Global Leader in <span className="text-brand-primary">Engineering & Technical Consultancy</span>
             </h3>
             <p className="text-lg text-slate-600 mb-6 leading-relaxed">
               AVCONEXPO is an Engineering-Technology, Supply-Chain Management, Architecture-Design, and industrial solution company, delivering comprehensive services across industries.
@@ -506,7 +506,7 @@ const Expertise = () => {
           <div className="text-center lg:text-left">
             <h2 className="text-xs lg:text-sm font-bold text-brand-primary uppercase tracking-[0.2em] mb-4">Our Expertise</h2>
             <h3 className="text-3xl lg:text-5xl font-bold mb-6 lg:mb-8 leading-tight">
-              Driven by a Team of <br className="hidden lg:block" /> Elite Professionals
+              Driven by a Team of <br className="hidden lg:block" /> <span className="text-brand-primary">Elite Professionals</span>
             </h3>
             <p className="text-slate-300 mb-10 lg:mb-12 leading-relaxed text-base lg:text-lg max-w-2xl mx-auto lg:mx-0">
               Our strength lies in our diverse team of specialists who bring decades of collective experience to every project. We don't just consult; we partner with you to build the future of industry.
@@ -637,7 +637,7 @@ const Sectors = () => {
               <img src="https://www.avconexpo.com/assets/img/icon/subTitleIcon.svg" className="w-4 h-4" alt="" />
               Sectors
             </div>
-            <h3 className="text-4xl lg:text-5xl font-bold text-brand-primary">Sectors We Specialize In</h3>
+            <h3 className="text-4xl lg:text-5xl font-bold text-slate-900">Sectors We <span className="text-brand-primary">Specialize In</span></h3>
           </div>
           
           <div className="flex gap-3">
@@ -736,7 +736,7 @@ const Clients = () => {
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-100 text-brand-primary text-xs font-bold uppercase tracking-widest mb-4">
           Partnerships
         </div>
-        <h3 className="text-3xl font-bold text-brand-primary">Clients & Partners</h3>
+        <h3 className="text-3xl font-bold text-slate-900">Clients & <span className="text-brand-primary">Partners</span></h3>
       </div>
       
       <div className="relative flex overflow-hidden group z-10">
@@ -921,7 +921,7 @@ const Testimonials = () => {
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-brand-primary text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
               Clients Feedback
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-brand-primary tracking-tight leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight leading-tight">
               Delivering Excellence, <br />
               <span className="text-brand-primary italic font-serif">Reflected By Our Clients</span>
             </h2>
@@ -1114,7 +1114,7 @@ const Contact = () => {
             <div>
               <h2 className="text-sm font-bold text-brand-primary uppercase tracking-[0.2em] mb-4">Get in Touch</h2>
               <h3 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Start Your Next Project?
+                Ready to Start Your <span className="text-brand-primary">Next Project?</span>
               </h3>
               <p className="text-slate-400 text-lg mb-8">
                 Contact our team of experts today for a comprehensive consultation on your industrial needs.
