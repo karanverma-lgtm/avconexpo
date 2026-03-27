@@ -500,44 +500,47 @@ const Expertise = () => {
   ];
 
   return (
-    <section id="expertise" className="py-24 bg-brand-primary text-white">
+    <section id="expertise" className="py-20 lg:py-32 bg-brand-primary text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className="text-sm font-bold text-brand-accent uppercase tracking-[0.2em] mb-4">Our Expertise</h2>
-            <h3 className="text-4xl font-bold mb-8 leading-tight">
-              Driven by a Team of Elite Professionals
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div className="text-center lg:text-left">
+            <h2 className="text-xs lg:text-sm font-bold text-brand-accent uppercase tracking-[0.2em] mb-4">Our Expertise</h2>
+            <h3 className="text-3xl lg:text-5xl font-bold mb-6 lg:mb-8 leading-tight">
+              Driven by a Team of <br className="hidden lg:block" /> Elite Professionals
             </h3>
-            <p className="text-slate-300 mb-12 leading-relaxed text-lg">
+            <p className="text-slate-300 mb-10 lg:mb-12 leading-relaxed text-base lg:text-lg max-w-2xl mx-auto lg:mx-0">
               Our strength lies in our diverse team of specialists who bring decades of collective experience to every project. We don't just consult; we partner with you to build the future of industry.
             </p>
             
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4 text-left">
               {roles.map((role, i) => (
-                <div key={i} className="flex items-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
-                  <div className="text-brand-accent">{role.icon}</div>
-                  <span className="font-medium">{role.name}</span>
+                <div key={i} className="flex items-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="text-brand-accent group-hover:scale-110 transition-transform">{role.icon}</div>
+                  <span className="font-medium text-sm lg:text-base">{role.name}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="relative">
-            <div className="aspect-square rounded-full border border-white/10 p-12 flex items-center justify-center">
-              <div className="aspect-square rounded-full border border-white/20 p-12 flex items-center justify-center w-full">
+          <div className="relative mt-16 lg:mt-0 flex justify-center">
+            {/* Decorative Background Glow */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-accent/10 blur-[100px] rounded-full" />
+            
+            <div className="w-full max-w-[300px] sm:max-w-[400px] lg:max-w-none aspect-square rounded-full border border-white/10 p-6 sm:p-12 flex items-center justify-center relative z-10">
+              <div className="aspect-square rounded-full border border-white/20 p-6 sm:p-12 flex items-center justify-center w-full">
                 <div className="aspect-square rounded-full bg-brand-accent/20 flex items-center justify-center w-full relative">
                   <motion.div 
                     animate={{ rotate: 360 }}
-                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                    transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
                     className="absolute inset-0"
                   >
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-brand-accent rounded-full flex items-center justify-center shadow-xl shadow-brand-accent/50">
-                      <Lightbulb className="w-6 h-6" />
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 lg:w-14 lg:h-14 bg-brand-accent rounded-full flex items-center justify-center shadow-2xl shadow-brand-accent/50">
+                      <Lightbulb className="w-5 h-5 lg:w-7 lg:h-7" />
                     </div>
                   </motion.div>
-                  <div className="text-center p-8">
-                    <div className="text-5xl font-bold mb-2">100%</div>
-                    <div className="text-sm uppercase tracking-widest text-brand-accent font-bold">Client Satisfaction</div>
+                  <div className="text-center p-4 lg:p-8">
+                    <div className="text-4xl lg:text-6xl font-bold mb-1 lg:mb-2">100%</div>
+                    <div className="text-[10px] lg:text-xs uppercase tracking-[0.2em] text-brand-accent font-bold">Client Satisfaction</div>
                   </div>
                 </div>
               </div>
