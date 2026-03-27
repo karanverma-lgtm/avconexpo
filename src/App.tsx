@@ -68,12 +68,12 @@ const Navbar = () => {
     )}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-brand-primary rounded-lg flex items-center justify-center text-white font-display font-bold text-xl">
-            A
-          </div>
-          <span className="font-display font-bold text-xl tracking-tighter text-brand-primary">
-            AVCONEXPO
-          </span>
+          <img 
+            src="https://www.avconexpo.com/assets/img/logo/brand-logo.png" 
+            alt="AVCONEXPO Logo" 
+            className="h-10 w-auto object-contain"
+            referrerPolicy="no-referrer"
+          />
         </div>
 
         {/* Desktop Nav */}
@@ -82,12 +82,12 @@ const Navbar = () => {
             <a 
               key={link.name} 
               href={link.href}
-              className="text-sm font-medium text-slate-600 hover:text-brand-accent transition-colors"
+              className="text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors"
             >
               {link.name}
             </a>
           ))}
-          <button className="bg-brand-primary text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-slate-800 transition-all shadow-lg shadow-slate-200">
+          <button className="bg-brand-primary text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-slate-800 transition-all shadow-lg shadow-orange-100">
             Get a Quote
           </button>
         </div>
@@ -137,7 +137,7 @@ const Hero = () => {
     <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
       {/* Background Accents */}
       <div className="absolute top-0 right-0 -z-10 w-1/2 h-full opacity-10 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-accent rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-primary rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
       </div>
       
       <div className="max-w-7xl mx-auto px-6">
@@ -147,12 +147,12 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-brand-accent text-xs font-bold uppercase tracking-widest mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-100 text-brand-primary text-xs font-bold uppercase tracking-widest mb-6">
               <Globe className="w-3 h-3" />
               Global Business & Technical Consultancy
             </div>
-            <h1 className="text-5xl lg:text-7xl font-bold text-brand-primary leading-[1.1] mb-6">
-              From Concept to <span className="text-brand-accent italic">Consumer.</span>
+            <h1 className="text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] mb-6">
+              From Concept to <span className="text-brand-primary italic">Consumer.</span>
             </h1>
             <p className="text-lg text-slate-600 mb-8 max-w-xl leading-relaxed">
               AVCONEXPO delivers comprehensive engineering, supply-chain, and industrial solutions across Greenfield and Brownfield projects worldwide.
@@ -201,7 +201,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/60 to-transparent" />
               <div className="absolute bottom-8 left-8 right-8 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 text-white">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-brand-accent rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-brand-primary rounded-full flex items-center justify-center">
                     <Zap className="w-6 h-6" />
                   </div>
                   <div>
@@ -291,11 +291,11 @@ const Services = () => {
     <section id="services" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-brand-accent text-xs font-bold uppercase tracking-widest mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-100 text-brand-primary text-xs font-bold uppercase tracking-widest mb-4">
             <Settings className="w-3 h-3" />
             Our Services
           </div>
-          <h3 className="text-4xl lg:text-5xl font-bold text-brand-primary mb-4">End-to-End Industrial Solutions</h3>
+          <h3 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">End-to-End Industrial Solutions</h3>
           <p className="text-slate-600 max-w-2xl mx-auto">
             Expert Business and Technical consultancy delivering excellence from concept to consumer.
           </p>
@@ -315,19 +315,19 @@ const Services = () => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute top-4 left-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center text-brand-accent shadow-sm">
+                <div className="absolute top-4 left-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center text-brand-primary shadow-sm">
                   {React.cloneElement(service.icon as React.ReactElement, { className: "w-6 h-6" })}
                 </div>
               </div>
               
               <div className="p-8 flex-grow flex flex-col">
-                <div className="text-xs font-bold text-brand-accent uppercase tracking-wider mb-3">{service.tag}</div>
-                <h4 className="text-xl font-bold text-brand-primary mb-4 group-hover:text-brand-accent transition-colors">{service.title}</h4>
+                <div className="text-xs font-bold text-brand-primary uppercase tracking-wider mb-3">{service.tag}</div>
+                <h4 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-brand-primary transition-colors">{service.title}</h4>
                 <p className="text-slate-600 leading-relaxed mb-6 text-sm">
                   {service.description}
                 </p>
                 <div className="mt-auto">
-                  <a href="#" className="inline-flex items-center gap-2 text-sm font-bold text-brand-primary hover:text-brand-accent transition-colors">
+                  <a href="#" className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-brand-primary transition-colors">
                     Read more <ChevronRight className="w-4 h-4" />
                   </a>
                 </div>
@@ -342,7 +342,7 @@ const Services = () => {
 
 const Achievements = () => {
   return (
-    <section className="py-20 bg-brand-accent relative overflow-hidden">
+    <section className="py-20 bg-brand-primary relative overflow-hidden">
       {/* Background Achievement Circle */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/4 opacity-10 pointer-events-none">
         <motion.img 
@@ -414,7 +414,7 @@ const Achievements = () => {
         >
           <a href="#about" className="inline-flex items-center gap-3 text-white font-bold text-xl group hover:text-white/80 transition-all">
             AVCONEXPO - Learn More About Us
-            <div className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-brand-accent transition-all">
+            <div className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-brand-primary transition-all">
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </div>
           </a>
@@ -450,7 +450,7 @@ const About = () => {
                 }}
               />
             </div>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-brand-accent rounded-full flex flex-col items-center justify-center text-white shadow-2xl border-8 border-slate-50 text-center p-2">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-brand-primary rounded-full flex flex-col items-center justify-center text-white shadow-2xl border-8 border-slate-50 text-center p-2">
               <div className="text-2xl font-bold leading-none">25+</div>
               <div className="text-[10px] font-bold uppercase tracking-tighter leading-tight">Years</div>
               <div className="text-[10px] font-bold uppercase tracking-tighter leading-tight">Experience</div>
@@ -458,7 +458,7 @@ const About = () => {
           </div>
 
           <div>
-            <h2 className="text-sm font-bold text-brand-accent uppercase tracking-[0.2em] mb-4">About AVCONEXPO</h2>
+            <h2 className="text-sm font-bold text-brand-primary uppercase tracking-[0.2em] mb-4">About AVCONEXPO</h2>
             <h3 className="text-4xl font-bold text-brand-primary mb-6 leading-tight">
               A Global Leader in Engineering & Technical Consultancy
             </h3>
@@ -477,7 +477,7 @@ const About = () => {
                 "Commitment to innovation and sustainability"
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-brand-accent" />
+                  <CheckCircle2 className="w-5 h-5 text-brand-primary" />
                   <span className="font-medium text-slate-700">{item}</span>
                 </div>
               ))}
@@ -500,11 +500,11 @@ const Expertise = () => {
   ];
 
   return (
-    <section id="expertise" className="py-20 lg:py-32 bg-brand-primary text-white overflow-hidden">
+    <section id="expertise" className="py-20 lg:py-32 bg-slate-900 text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="text-center lg:text-left">
-            <h2 className="text-xs lg:text-sm font-bold text-brand-accent uppercase tracking-[0.2em] mb-4">Our Expertise</h2>
+            <h2 className="text-xs lg:text-sm font-bold text-brand-primary uppercase tracking-[0.2em] mb-4">Our Expertise</h2>
             <h3 className="text-3xl lg:text-5xl font-bold mb-6 lg:mb-8 leading-tight">
               Driven by a Team of <br className="hidden lg:block" /> Elite Professionals
             </h3>
@@ -515,7 +515,7 @@ const Expertise = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4 text-left">
               {roles.map((role, i) => (
                 <div key={i} className="flex items-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="text-brand-accent group-hover:scale-110 transition-transform">{role.icon}</div>
+                  <div className="text-brand-primary group-hover:scale-110 transition-transform">{role.icon}</div>
                   <span className="font-medium text-sm lg:text-base">{role.name}</span>
                 </div>
               ))}
@@ -524,23 +524,23 @@ const Expertise = () => {
 
           <div className="relative mt-16 lg:mt-0 flex justify-center">
             {/* Decorative Background Glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-accent/10 blur-[100px] rounded-full" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-primary/10 blur-[100px] rounded-full" />
             
             <div className="w-full max-w-[300px] sm:max-w-[400px] lg:max-w-none aspect-square rounded-full border border-white/10 p-6 sm:p-12 flex items-center justify-center relative z-10">
               <div className="aspect-square rounded-full border border-white/20 p-6 sm:p-12 flex items-center justify-center w-full">
-                <div className="aspect-square rounded-full bg-brand-accent/20 flex items-center justify-center w-full relative">
+                <div className="aspect-square rounded-full bg-brand-primary/20 flex items-center justify-center w-full relative">
                   <motion.div 
                     animate={{ rotate: 360 }}
                     transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
                     className="absolute inset-0"
                   >
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 lg:w-14 lg:h-14 bg-brand-accent rounded-full flex items-center justify-center shadow-2xl shadow-brand-accent/50">
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 lg:w-14 lg:h-14 bg-brand-primary rounded-full flex items-center justify-center shadow-2xl shadow-brand-primary/50">
                       <Lightbulb className="w-5 h-5 lg:w-7 lg:h-7" />
                     </div>
                   </motion.div>
                   <div className="text-center p-4 lg:p-8">
                     <div className="text-4xl lg:text-6xl font-bold mb-1 lg:mb-2">100%</div>
-                    <div className="text-[10px] lg:text-xs uppercase tracking-[0.2em] text-brand-accent font-bold">Client Satisfaction</div>
+                    <div className="text-[10px] lg:text-xs uppercase tracking-[0.2em] text-brand-primary font-bold">Client Satisfaction</div>
                   </div>
                 </div>
               </div>
@@ -633,7 +633,7 @@ const Sectors = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-brand-accent text-xs font-bold uppercase tracking-widest mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-100 text-brand-primary text-xs font-bold uppercase tracking-widest mb-4">
               <img src="https://www.avconexpo.com/assets/img/icon/subTitleIcon.svg" className="w-4 h-4" alt="" />
               Sectors
             </div>
@@ -689,7 +689,7 @@ const Sectors = () => {
                   </p>
                 </div>
                 <div className="px-8 pb-8">
-                  <button className="text-brand-accent font-bold text-sm flex items-center gap-2 group/btn">
+                  <button className="text-brand-primary font-bold text-sm flex items-center gap-2 group/btn">
                     Explore Sector
                     <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                   </button>
@@ -733,7 +733,7 @@ const Clients = () => {
            style={{ backgroundImage: 'radial-gradient(#cbd5e1 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
       
       <div className="max-w-7xl mx-auto px-6 mb-12 text-center relative z-10">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-brand-accent text-xs font-bold uppercase tracking-widest mb-4">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-100 text-brand-primary text-xs font-bold uppercase tracking-widest mb-4">
           Partnerships
         </div>
         <h3 className="text-3xl font-bold text-brand-primary">Clients & Partners</h3>
@@ -789,15 +789,15 @@ const TestimonialCard = ({ t }: { t: any }) => {
   const isLongText = t.text.length > maxLength;
 
   return (
-    <div className="bg-white p-10 rounded-[2.5rem] shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] border border-slate-100 h-full flex flex-col group hover:shadow-[0_20px_60px_-20px_rgba(59,130,246,0.15)] hover:border-blue-100 transition-all duration-500 min-h-[420px]">
+    <div className="bg-white p-10 rounded-[2.5rem] shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] border border-slate-100 h-full flex flex-col group hover:shadow-[0_20px_60px_-20px_rgba(253,126,20,0.15)] hover:border-orange-100 transition-all duration-500 min-h-[420px]">
       <div className="flex gap-1 mb-8">
         {[...Array(t.rating)].map((_, i) => (
-          <Star key={i} className="w-4 h-4 fill-brand-accent text-brand-accent" />
+          <Star key={i} className="w-4 h-4 fill-brand-primary text-brand-primary" />
         ))}
       </div>
       
       <div className="relative mb-10 flex-grow flex flex-col">
-        <Quote className="absolute -top-6 -left-6 w-16 h-16 text-slate-50 group-hover:text-blue-50 transition-colors duration-500 -z-10" />
+        <Quote className="absolute -top-6 -left-6 w-16 h-16 text-slate-50 group-hover:text-orange-50 transition-colors duration-500 -z-10" />
         <div className="relative z-10 flex-grow">
           <p className={cn(
             "text-slate-700 leading-relaxed italic text-lg font-medium transition-all duration-300",
@@ -811,7 +811,7 @@ const TestimonialCard = ({ t }: { t: any }) => {
                 e.stopPropagation();
                 setIsExpanded(!isExpanded);
               }}
-              className="mt-4 text-brand-accent font-bold text-sm hover:underline flex items-center gap-1 group/btn relative z-20"
+              className="mt-4 text-brand-primary font-bold text-sm hover:underline flex items-center gap-1 group/btn relative z-20"
             >
               {isExpanded ? 'Show Less' : 'Read More'}
               <ChevronRight className={cn("w-4 h-4 transition-transform", isExpanded ? "rotate-90" : "group-hover:translate-x-0.5")} />
@@ -833,12 +833,12 @@ const TestimonialCard = ({ t }: { t: any }) => {
               }}
             />
           </div>
-          <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-brand-accent rounded-full flex items-center justify-center text-white shadow-lg border-2 border-white">
+          <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-brand-primary rounded-full flex items-center justify-center text-white shadow-lg border-2 border-white">
             <CheckCircle2 className="w-3 h-3" />
           </div>
         </div>
         <div>
-          <h4 className="font-bold text-brand-primary text-lg group-hover:text-brand-accent transition-colors">{t.name}</h4>
+          <h4 className="font-bold text-brand-primary text-lg group-hover:text-brand-primary transition-colors">{t.name}</h4>
           <span className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">Verified Partner</span>
         </div>
       </div>
@@ -912,26 +912,26 @@ const Testimonials = () => {
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:32px_32px]" />
       </div>
-      <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-blue-100/30 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-orange-100/30 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
       <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-slate-200/30 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2" />
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-brand-accent text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-brand-primary text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
               Clients Feedback
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-brand-primary tracking-tight leading-tight">
               Delivering Excellence, <br />
-              <span className="text-brand-accent italic font-serif">Reflected By Our Clients</span>
+              <span className="text-brand-primary italic font-serif">Reflected By Our Clients</span>
             </h2>
           </div>
           
           <div className="flex gap-4">
-            <button className="swiper-prev-btn w-14 h-14 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:border-brand-accent hover:text-brand-accent hover:bg-brand-accent/5 transition-all duration-300 bg-white shadow-sm group">
+            <button className="swiper-prev-btn w-14 h-14 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:border-brand-primary hover:text-brand-primary hover:bg-brand-primary/5 transition-all duration-300 bg-white shadow-sm group">
               <ChevronLeft className="w-6 h-6 group-hover:-translate-x-0.5 transition-transform" />
             </button>
-            <button className="swiper-next-btn w-14 h-14 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:border-brand-accent hover:text-brand-accent hover:bg-brand-accent/5 transition-all duration-300 bg-white shadow-sm group">
+            <button className="swiper-next-btn w-14 h-14 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:border-brand-primary hover:text-brand-primary hover:bg-brand-primary/5 transition-all duration-300 bg-white shadow-sm group">
               <ChevronRight className="w-6 h-6 group-hover:translate-x-0.5 transition-transform" />
             </button>
           </div>
@@ -982,8 +982,8 @@ const Testimonials = () => {
         }
         .swiper-custom-pagination .swiper-pagination-bullet-active {
           width: 32px;
-          background: #3B82F6;
-          box-shadow: 0 4px 10px -2px rgba(59, 130, 246, 0.3);
+          background: #fd7e14;
+          box-shadow: 0 4px 10px -2px rgba(253, 126, 20, 0.3);
         }
       `}</style>
     </section>
@@ -1025,11 +1025,11 @@ const Blog = () => {
     <section id="blog" className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-brand-accent text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-brand-primary text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
             Our Insights
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-primary tracking-tight leading-tight">
-            Our Latest <span className="text-brand-accent">Blog</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight leading-tight">
+            Our Latest <span className="text-brand-primary">Blog</span>
           </h2>
         </div>
 
@@ -1041,7 +1041,7 @@ const Blog = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="group bg-slate-50 rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 flex flex-col h-full"
+              className="group bg-slate-50 rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 flex flex-col h-full"
             >
               <div className="relative h-64 overflow-hidden">
                 <img 
@@ -1054,7 +1054,7 @@ const Blog = () => {
                   }}
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="bg-brand-accent text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                  <span className="bg-brand-primary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                     Industrial
                   </span>
                 </div>
@@ -1072,7 +1072,7 @@ const Blog = () => {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold text-brand-primary mb-4 group-hover:text-brand-accent transition-colors line-clamp-2 leading-tight">
+                <h3 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-brand-primary transition-colors line-clamp-2 leading-tight">
                   {blog.title}
                 </h3>
                 
@@ -1112,7 +1112,7 @@ const Contact = () => {
 
           <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-sm font-bold text-brand-accent uppercase tracking-[0.2em] mb-4">Get in Touch</h2>
+              <h2 className="text-sm font-bold text-brand-primary uppercase tracking-[0.2em] mb-4">Get in Touch</h2>
               <h3 className="text-4xl lg:text-5xl font-bold text-white mb-6">
                 Ready to Start Your Next Project?
               </h3>
@@ -1122,7 +1122,7 @@ const Contact = () => {
               
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-brand-accent">
+                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-brand-primary">
                     <Globe className="w-6 h-6" />
                   </div>
                   <div>
@@ -1131,7 +1131,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-brand-accent">
+                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-brand-primary">
                     <ShieldCheck className="w-6 h-6" />
                   </div>
                   <div>
@@ -1144,8 +1144,8 @@ const Contact = () => {
 
             <div className="relative">
               {/* Decorative Blobs for Glassmorphism */}
-              <div className="absolute -top-20 -right-20 w-64 h-64 bg-brand-accent/20 rounded-full blur-[80px] animate-pulse" />
-              <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-blue-500/10 rounded-full blur-[80px] animate-pulse delay-700" />
+              <div className="absolute -top-20 -right-20 w-64 h-64 bg-brand-primary/20 rounded-full blur-[80px] animate-pulse" />
+              <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-orange-500/10 rounded-full blur-[80px] animate-pulse delay-700" />
 
               <div className="bg-white/10 backdrop-blur-xl rounded-[2.5rem] p-8 lg:p-12 border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.3)] relative z-10">
                 <form className="space-y-6">
@@ -1154,7 +1154,7 @@ const Contact = () => {
                       <label className="text-sm font-bold text-white/80 ml-1">Full Name</label>
                       <input 
                         type="text" 
-                        className="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:ring-2 focus:ring-brand-accent focus:bg-white/10 outline-none transition-all duration-300" 
+                        className="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:ring-2 focus:ring-brand-primary focus:bg-white/10 outline-none transition-all duration-300" 
                         placeholder="John Doe" 
                       />
                     </div>
@@ -1162,14 +1162,14 @@ const Contact = () => {
                       <label className="text-sm font-bold text-white/80 ml-1">Email Address</label>
                       <input 
                         type="email" 
-                        className="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:ring-2 focus:ring-brand-accent focus:bg-white/10 outline-none transition-all duration-300" 
+                        className="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:ring-2 focus:ring-brand-primary focus:bg-white/10 outline-none transition-all duration-300" 
                         placeholder="john@company.com" 
                       />
                     </div>
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-bold text-white/80 ml-1">Project Type</label>
-                    <select className="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 text-white focus:ring-2 focus:ring-brand-accent focus:bg-white/10 outline-none transition-all duration-300 appearance-none cursor-pointer">
+                    <select className="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 text-white focus:ring-2 focus:ring-brand-primary focus:bg-white/10 outline-none transition-all duration-300 appearance-none cursor-pointer">
                       <option className="bg-slate-900">Greenfield Project</option>
                       <option className="bg-slate-900">Brownfield Expansion</option>
                       <option className="bg-slate-900">Technical Consultancy</option>
@@ -1180,11 +1180,11 @@ const Contact = () => {
                     <label className="text-sm font-bold text-white/80 ml-1">Message</label>
                     <textarea 
                       rows={4} 
-                      className="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:ring-2 focus:ring-brand-accent focus:bg-white/10 outline-none transition-all duration-300 resize-none" 
+                      className="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:ring-2 focus:ring-brand-primary focus:bg-white/10 outline-none transition-all duration-300 resize-none" 
                       placeholder="Tell us about your project..."
                     ></textarea>
                   </div>
-                  <button className="w-full bg-brand-accent text-white py-5 rounded-2xl font-bold hover:bg-white hover:text-brand-primary transition-all duration-500 shadow-xl shadow-brand-accent/20 group flex items-center justify-center gap-2">
+                  <button className="w-full bg-brand-primary text-white py-5 rounded-2xl font-bold hover:bg-white hover:text-brand-primary transition-all duration-500 shadow-xl shadow-brand-primary/20 group flex items-center justify-center gap-2">
                     Send Inquiry
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
@@ -1205,12 +1205,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 lg:col-span-1">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 bg-brand-primary rounded-lg flex items-center justify-center text-white font-display font-bold text-lg">
-                A
-              </div>
-              <span className="font-display font-bold text-xl tracking-tighter text-brand-primary">
-                AVCONEXPO
-              </span>
+              <img 
+                src="https://www.avconexpo.com/assets/img/logo/brand-logo.png" 
+                alt="AVCONEXPO Logo" 
+                className="h-8 w-auto object-contain"
+                referrerPolicy="no-referrer"
+              />
             </div>
             <p className="text-slate-500 text-sm leading-relaxed mb-6 font-medium italic">
               Serving Clients Worldwide
@@ -1223,13 +1223,13 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-brand-primary mb-6">Quick Links</h4>
             <ul className="space-y-4 text-sm text-slate-500">
-              <li><a href="#" className="hover:text-brand-accent transition-colors">Home</a></li>
-              <li><a href="#about" className="hover:text-brand-accent transition-colors">About Us</a></li>
-              <li><a href="#contact" className="hover:text-brand-accent transition-colors">Contact Us</a></li>
-              <li><a href="#services" className="hover:text-brand-accent transition-colors">Our Services</a></li>
-              <li><a href="#sectors" className="hover:text-brand-accent transition-colors">Projects</a></li>
-              <li><a href="#blog" className="hover:text-brand-accent transition-colors">Our Blogs</a></li>
-              <li><a href="#" className="hover:text-brand-accent transition-colors">Career</a></li>
+              <li><a href="#" className="hover:text-brand-primary transition-colors">Home</a></li>
+              <li><a href="#about" className="hover:text-brand-primary transition-colors">About Us</a></li>
+              <li><a href="#contact" className="hover:text-brand-primary transition-colors">Contact Us</a></li>
+              <li><a href="#services" className="hover:text-brand-primary transition-colors">Our Services</a></li>
+              <li><a href="#sectors" className="hover:text-brand-primary transition-colors">Projects</a></li>
+              <li><a href="#blog" className="hover:text-brand-primary transition-colors">Our Blogs</a></li>
+              <li><a href="#" className="hover:text-brand-primary transition-colors">Career</a></li>
             </ul>
           </div>
 
@@ -1237,7 +1237,7 @@ const Footer = () => {
             <h4 className="font-bold text-brand-primary mb-6">Contact Us</h4>
             <div className="grid sm:grid-cols-2 gap-8">
               <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-brand-accent shrink-0">
+                <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-brand-primary shrink-0">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
@@ -1251,7 +1251,7 @@ const Footer = () => {
               
               <div className="space-y-6">
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-brand-accent shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-brand-primary shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
@@ -1264,7 +1264,7 @@ const Footer = () => {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-brand-accent shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-brand-primary shrink-0">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
@@ -1280,8 +1280,8 @@ const Footer = () => {
         <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
           <p>© 2026 AVCONEXPO. All rights reserved.</p>
           <div className="flex gap-8">
-            <a href="#" className="hover:text-brand-accent transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-brand-accent transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-brand-primary transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-brand-primary transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>
@@ -1291,7 +1291,7 @@ const Footer = () => {
 
 export default function App() {
   return (
-    <div className="min-h-screen selection:bg-brand-accent selection:text-white">
+    <div className="min-h-screen selection:bg-brand-primary selection:text-white">
       <Navbar />
       <main>
         <Hero />

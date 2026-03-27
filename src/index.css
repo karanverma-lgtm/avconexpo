@@ -6,9 +6,11 @@
   --font-display: "Space Grotesk", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 
-  --color-brand-primary: #0F172A;
-  --color-brand-accent: #3B82F6;
-  --color-brand-secondary: #64748B;
+  --color-brand-primary: #fd7e14;
+  --color-brand-accent: #ff922b;
+  --color-brand-dark: #e8590c;
+  --color-brand-light: #fff4e6;
+  --color-brand-secondary: #495057;
 }
 
 @keyframes marquee {
